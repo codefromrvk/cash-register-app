@@ -4,17 +4,37 @@ const checkButton = document.querySelector("#check");
 const errorMessage = document.querySelector("#error");
 const numberColumn = document.querySelector("#number").children;
 const notesColumn = document.querySelector("#denomination").children;
+const nextButton = document.querySelector("#next");
+const tableDisplay = document.querySelector("#display-table")
+const cashSection = document.querySelector("#cash-section")
 
-errorMessage.style.display = "none";
 
 checkButton.addEventListener("click", () => {
-    if (billAmount.valueAsNumber <= cashGiven.valueAsNumber) {
-        console.log(billAmount.valueAsNumber, cashGiven.valueAsNumber);
+    if (cashGiven.value < 0 || billAmount.value < 0) {
+        sendError("Invalid Number!");
+        tableDisplay.style.display = "none";
+
+    }
+    else if (billAmount.valueAsNumber <= cashGiven.valueAsNumber) {
+        // cashSection.style.display = "block";
+        tableDisplay.style.display = "block";
         getChange(cashGiven.valueAsNumber, billAmount.valueAsNumber)
     } else {
         sendError("Do you want to wash plates?")
+        tableDisplay.style.display = "none";
     }
 })
+nextButton.addEventListener("click", () => {
+
+    if (billAmount.value > 0) {
+        nextButton.style.display = "none";
+        cashSection.style.display = "flex";
+        checkButton.style.display = "block";
+    }
+    else {
+        sendError("Invalid Number");
+    }
+});
 
 function sendError(msg) {
     errorMessage.style.display = "block";
@@ -46,7 +66,6 @@ function assignValue(val, denEle) {
 
     for (let j = 1; j < notesColumn.length; j++) {
         let item = parseInt(notesColumn[j].innerText)
-        console.log(typeof (notesColumn[j].innerText), typeof (denEle))
         if (denEle === item) {
             numberColumn[j].innerText = val;
 
