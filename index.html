@@ -11,16 +11,21 @@
 
 <body>
     <div class="container">
-        <h1>Cash Register Manager</h1>
-        <small>Enter the bill amount and cash given by the customer and know minimum number of
+        <h1>💵Cash Register Manager💵</h1>
+        <small style="font-family: serif">Enter the bill amount and cash given by the customer and know minimum number
+            of
             notes to return</small>
-        <label for="bill-amount">Bill amount</label>
-        <input id="bill-amount" type="number">
-        <label for="given-amount">Cash given</label>
-        <input id="given-amount" type="number">
-        <button id="check">Check</button>
-        <p id="error">hh</p>
-        <table>
+        <label for="bill-amount" style="margin-top: 1rem">Bill amount</label>
+        <input class="bill" id="bill-amount" type="number">
+        <button id="next">Next</button>
+        <div id="cash-section" class="hide">
+            <label for="given-amount">Cash given</label>
+            <input id="given-amount" type="number">
+        </div>
+
+        <button id="check" class="hide">Check</button>
+        <p id="error" class="hide"></p>
+        <table id="display-table" class="hide">
             <caption>Return Change</caption>
             <tr id="number">
                 <th>No. of Notes</th>

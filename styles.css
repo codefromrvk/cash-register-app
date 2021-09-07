@@ -1,7 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
 
+:root {
+  --primary-color: #92400E ;
+}
+
+body {
+    font-family:'Playfair Display', sans-serif;
+  }
 .container{
 
     display: flex;
     flex-direction: column;
     width: 50vw;
+    margin:auto;
+    text-align: center;
+    border: 2px solid var(--primary-color);
+   
+    padding:1rem;
+}
+.hide{
+display: none;
+}
+label{
+    font-weight: bold;
+}
+#cash-section{
+   
+    flex-direction: column;
+
+}
+#bill-amount{
+    width:50%;
+    margin: 1rem auto;
+}
+#bill-amount {
+    border: 2px solid var(--primary-color);
+    border-radius: 3px;
+}
+#cash-section input{
+    width:50%;
+    margin: 1rem auto;
+    border: 2px solid var(--primary-color);
+    border-radius: 3px;
+}
+
+    
+
+#check{
+    margin: 1rem auto;
+    /* margin: auto; */
+}
+#next{
+    margin: 1rem auto;
+}
+#display-table{
+    margin: auto;
+    padding: 1rem;
+    border-collapse: collapse;
+}
+caption{
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+th,td{
+    border: 1px solid var(--primary-color);
+    padding: 0.5rem;
 }
