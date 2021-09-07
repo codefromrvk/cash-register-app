@@ -10,20 +10,19 @@ body {
   }
 .container{
 
+    margin: 4rem auto;
     display: flex;
     flex-direction: column;
-   
-    margin:auto;
+ 
     text-align: center;
-   
-   
-    padding:1rem;
+    padding: 1rem;
 }
 .hide{
 display: none;
 }
 label{
     font-weight: bold;
+    font-size: large;
 }
 #cash-section{
    
@@ -57,7 +56,7 @@ label{
 .button-style{
     background-color: var(--primary-color);
     border-radius: 7px;
-    font-weight: 200;
+    font-weight: 400;
 }
 .button-style:hover{
     background-color:rgb(126, 41, 41);
@@ -82,5 +81,6 @@ td, th {
 caption{
     font-weight: bold;
     margin: 1rem;
+    font-size: large;
 }
 
