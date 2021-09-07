@@ -6,15 +6,16 @@
 
 body {
     font-family:'Playfair Display', sans-serif;
+    margin: 0px;
   }
 .container{
 
     display: flex;
     flex-direction: column;
-    width: 50vw;
+   
     margin:auto;
     text-align: center;
-    border: 2px solid var(--primary-color);
+   
    
     padding:1rem;
 }
@@ -30,7 +31,7 @@ label{
 
 }
 #bill-amount{
-    width:50%;
+    
     margin: 1rem auto;
 }
 #bill-amount {
@@ -38,7 +39,7 @@ label{
     border-radius: 3px;
 }
 #cash-section input{
-    width:50%;
+    
     margin: 1rem auto;
     border: 2px solid var(--primary-color);
     border-radius: 3px;
@@ -47,22 +48,39 @@ label{
     
 
 #check{
-    margin: 1rem auto;
-    /* margin: auto; */
+  
+    margin: auto;
 }
 #next{
     margin: 1rem auto;
 }
-#display-table{
-    margin: auto;
-    padding: 1rem;
-    border-collapse: collapse;
+.button-style{
+    background-color: var(--primary-color);
+    border-radius: 7px;
+    font-weight: 200;
 }
+.button-style:hover{
+    background-color:rgb(126, 41, 41);
+}
+td, th {
+    border: 2px solid var(--primary-color);
+    width: 0%;
+    border-collapse: collapse;
+    padding: 0.4rem;
+  }
+  
+  table {
+    width: 50%;
+    
+    border-collapse: collapse;
+    margin: auto;
+  }
+  
+  
+  
+  
 caption{
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin: 1rem;
 }
-th,td{
-    border: 1px solid var(--primary-color);
-    padding: 0.5rem;
-}
+

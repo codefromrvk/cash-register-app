@@ -17,38 +17,39 @@
             notes to return</small>
         <label for="bill-amount" style="margin-top: 1rem">Bill amount</label>
         <input class="bill" id="bill-amount" type="number">
-        <button id="next">Next</button>
+        <button id="next" class="button-style">Next</button>
         <div id="cash-section" class="hide">
             <label for="given-amount">Cash given</label>
             <input id="given-amount" type="number">
         </div>
 
-        <button id="check" class="hide">Check</button>
+        <button id="check" class="button-style hide">Check</button>
         <p id="error" class="hide"></p>
-        <table id="display-table" class="hide">
-            <caption>Return Change</caption>
-            <tr id="number">
-                <th>No. of Notes</th>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-            </tr>
-            <tr id="denomination">
-                <th>Notes</th>
-                <td>2000</td>
-                <td>500</td>
-                <td>100</td>
-                <td>20</td>
-                <td>10</td>
-                <td>5</td>
-                <td>1</td>
-            </tr>
-        </table>
+        <div id="display-table" class="hide">
+            <table>
+                <caption>Return Change</caption>
+                <tr id="number">
+                    <th>No. of Notes</th>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr id="denomination">
+                    <th>Notes</th>
+                    <td>2000</td>
+                    <td>500</td>
+                    <td>100</td>
+                    <td>20</td>
+                    <td>10</td>
+                    <td>5</td>
+                    <td>1</td>
+                </tr>
+            </table>
+        </div>
     </div>
 
 </body>
