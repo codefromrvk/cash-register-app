@@ -65,7 +65,7 @@ function getChange(cash, amount) {
 function assignValue(val, denEle) {
 
     for (let j = 1; j < notesColumn.length; j++) {
-        let item = parseInt(notesColumn[j].innerText)
+        let item = Number(notesColumn[j].innerText)
         if (denEle === item) {
             numberColumn[j].innerText = val;
 
