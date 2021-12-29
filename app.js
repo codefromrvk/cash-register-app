@@ -8,7 +8,13 @@ const nextButton = document.querySelector("#next");
 const tableDisplay = document.querySelector("#display-table");
 const cashSection = document.querySelector("#cash-section");
 
+function clearTable() {
+  for (let i = 1; i < numberColumn.length; i++) {
+    numberColumn[i].innerText = 0;
+  }
+}
 checkButton.addEventListener("click", () => {
+  clearTable();
   if (cashGiven.value < 0 || billAmount.value < 0) {
     sendError("Invalid Number!");
     tableDisplay.style.display = "none";
